@@ -3,18 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Bike Guy – Book Now</title>
+  <title>The Bike Guy – Mobile Assembly Service</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Book bike, grill, and furniture assembly with The Bike Guy. Fast, affordable, mobile service.">
+  <meta name="keywords" content="bike assembly, grill assembly, Walmart furniture setup, The Bike Guy, mobile assembly Georgia">
+  <link rel="canonical" href="https://tinyurl.com/Thebikeguynow">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="The Bike Guy – Assembly Service">
+  <meta property="og:description" content="Need it assembled? Bikes, grills, furniture & more. Book online with The Bike Guy.">
+  <meta property="og:image" content="https://your-domain.com/the-bike-guy-logo.png">
+  <meta property="og:url" content="https://tinyurl.com/Thebikeguynow">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
 
-    <!-- LOGO ONLY -->
+    <!-- Logo -->
     <div class="logo">
       <img src="the-bike-guy-logo.png" alt="The Bike Guy logo" style="width:340px; max-width:100vw;">
     </div>
 
-    <!-- Booking Calendar (Calendly embed) -->
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a class="nav-btn" href="why.html">Why Book Us?</a>
+      <a class="nav-btn" href="photos.html">Photos</a>
+      <a class="nav-btn" href="shop.html">Shop Now</a>
+    </div>
+
+    <!-- Booking Calendar -->
     <div class="calendar-widget">
       <div class="calendly-inline-widget"
         data-url="https://calendly.com/thebikeguysite/30min"
@@ -32,18 +56,36 @@
       </div>
     </div>
 
+    <!-- Testimonials -->
+    <div class="testimonials">
+      <div class="testimonial" id="testimonial-rotator">
+        ⭐⭐⭐⭐⭐ “Super fast and friendly! Assembled our grill perfectly.” – Lisa M.
+      </div>
+    </div>
+
     <!-- Contact Buttons -->
     <div class="contact-buttons">
-      <a class="call-btn" href="tel:8287931481">
-        📞 Call Now
-      </a>
-      <a class="email-btn" href="mailto:TheBikeGuySite@gmail.com">
-        ✉️ Email Me
-      </a>
+      <a class="call-btn" href="tel:8287931481">📞 Call Now</a>
+      <a class="email-btn" href="mailto:TheBikeGuySite@gmail.com">✉️ Email Me</a>
     </div>
   </div>
 
   <!-- Calendly Script -->
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- Testimonial Rotator -->
+  <script>
+    const reviews = [
+      '⭐⭐⭐⭐⭐ “Super fast and friendly! Assembled our grill perfectly.” – Lisa M.',
+      '⭐⭐⭐⭐⭐ “On time and professional. Highly recommended!” – James T.',
+      '⭐⭐⭐⭐⭐ “The Bike Guy saved me hours of hassle.” – Maria G.',
+      '⭐⭐⭐⭐⭐ “Perfect setup. I’ll never do it myself again.” – Rob W.',
+    ];
+    let idx = 0;
+    setInterval(() => {
+      document.getElementById('testimonial-rotator').textContent = reviews[idx];
+      idx = (idx + 1) % reviews.length;
+    }, 5000);
+  </script>
 </body>
 </html>
